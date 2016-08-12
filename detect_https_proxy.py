@@ -20,8 +20,8 @@ verified_fingerprint = {"www.grc.com": "3fc3245c36b389b175ca20c01fc0f1494b7473e6
 
 
 def get_cert_fingerprint(certificate):
-    h = hashlib.sha1()
     der_cert = ssl.PEM_cert_to_DER_cert(certificate)
+    h = hashlib.sha1()
     h.update(der_cert)
     digest = h.hexdigest()
     return digest
