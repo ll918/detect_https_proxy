@@ -1,7 +1,6 @@
 #!/usr/local/bin/env python3
-# Detecting https proxy by comparing the sha1 fingerprint of a security certificate for a web site with a verified
-# fingerprint. If the digests are different it might be explained by the existence of an https proxy.
-# Verified fingerprints from https://www.grc.com/fingerprints.htm
+"""Detecting https proxy by comparing the sha1 fingerprint of a security certificate for a web site with a verified
+ fingerprint. Verified fingerprints from https://www.grc.com/fingerprints.htm"""
 
 import hashlib
 import ssl
@@ -20,15 +19,22 @@ verified_fingerprint = {"www.grc.com": "3fc3245c36b389b175ca20c01fc0f1494b7473e6
 
 
 def get_cert_fingerprint(certificate):
-    der_cert = ssl.PEM_cert_to_DER_cert(certificate)
+    """get a secure certificate in DER format and return a sha1 digest string used as a fingerprint"""
     h = hashlib.sha1()
-    h.update(der_cert)
+    h.update(certificate)
     digest = h.hexdigest()
     return digest
 
 
+def get_certificate(site):
+    """get a site and return a secure certificate in DER format"""
+    certificate = ssl.get_server_certificate((site, https_port))
+    der_cert = ssl.PEM_cert_to_DER_cert(certificate)
+    return der_cert
+
+
 for k, v in verified_fingerprint.items():
-    certificate = ssl.get_server_certificate((k, https_port))
+    certificate = get_certificate(k)
     fingerprint = get_cert_fingerprint(certificate)
 
     if fingerprint == v:
