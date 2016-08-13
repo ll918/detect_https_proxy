@@ -1,6 +1,10 @@
 #!/usr/local/bin/env python3
-"""Detecting https proxy by comparing the sha1 fingerprint of a security certificate for a web site with a verified
- fingerprint. Verified fingerprints from https://www.grc.com/fingerprints.htm"""
+"""Detecting https proxy presence.
+
+Detection is done by comparing the sha1 fingerprint of a security certificate for a web site with a verified
+fingerprint.
+Verified fingerprints from https://www.grc.com/fingerprints.htm
+"""
 
 import hashlib
 import ssl
@@ -27,17 +31,17 @@ def get_cert_fingerprint(certificate):
 
 
 def get_certificate(site):
-    """get a site and return a secure certificate in DER format"""
-    certificate = ssl.get_server_certificate((site, https_port))
-    der_cert = ssl.PEM_cert_to_DER_cert(certificate)
+    """get a web site and return a secure certificate in DER format"""
+    pem_cert = ssl.get_server_certificate((site, https_port))
+    der_cert = ssl.PEM_cert_to_DER_cert(pem_cert)
     return der_cert
 
 
-for k, v in verified_fingerprint.items():
-    certificate = get_certificate(k)
+for website, ver_fprint in verified_fingerprint.items():
+    certificate = get_certificate(website)
     fingerprint = get_cert_fingerprint(certificate)
 
-    if fingerprint == v:
-        print(k + ": fingerprint ok")
+    if fingerprint == ver_fprint:
+        print(website + ": fingerprint ok")
     else:
-        print(k + ": fingerprint is " + fingerprint + " instead of " + v)
+        print(website + ": fingerprint is " + fingerprint + " instead of " + ver_fprint)
