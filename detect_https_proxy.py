@@ -54,9 +54,9 @@ for website, ver_fprint in verified_fingerprint.items():
 
 if wrong_fingerprint > 0:
     print()
-    print('There might be an HTTPS proxy intercepting your ssl connections. '
-          'Check that your verified fingerprints are accurate and up to date. '
-          'Then try again.')
+    print('There might be an HTTPS proxy intercepting your ssl connections.'
+          'Check that your verified fingerprints are accurate and up to date'
+          'then try again.')
 else:
     print()
     print('No HTTPS proxy detected.')
