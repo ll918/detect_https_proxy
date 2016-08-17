@@ -5,9 +5,9 @@ Detection is done by comparing the sha1 fingerprint of a security certificate
 for a web site with a verified fingerprint.
 Verified fingerprints from https://www.grc.com/fingerprints.htm
 """
-
 import hashlib
 import ssl
+from collections import OrderedDict
 
 https_port = 443
 verified_fingerprint = {
@@ -21,6 +21,8 @@ verified_fingerprint = {
     'www.yahoo.com': '413072f803ce961210e9a45d10da14b0d2d48532',
     'wordpress.com': '1fe2d64111fca8d71b234ffceca86d80de17d94a',
     'www.wordpress.com': '54e089df28538300105dd43764fde7d0f5ed5bc0'}
+ver_fing_sorted = OrderedDict(
+    sorted(verified_fingerprint.items(), key=lambda t: t[0]))
 
 
 def get_cert_fingerprint(certificate):
@@ -41,7 +43,7 @@ def get_certificate(site):
 
 
 wrong_fingerprint = 0
-for website, ver_fprint in verified_fingerprint.items():
+for website, ver_fprint in ver_fing_sorted.items():
     certificate = get_certificate(website)
     fingerprint = get_cert_fingerprint(certificate)
 
