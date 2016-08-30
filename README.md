@@ -23,7 +23,7 @@ work, school?
     
     
 ## N.B.
-www.blogger.com sometime return alternate fingerprint: 
+www.blogger.com sometime return alternate certificate with fingerprint: 
 f377e4d22b65f816117e28897267ee8fa90e75a8. This appear to be a 
 false positive. I need to figure the cause.
 
