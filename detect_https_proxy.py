@@ -14,10 +14,10 @@ verified_fingerprint = {
     'www.grc.com': '3fc3245c36b389b175ca20c01fc0f1494b7473e6',
     'www.facebook.com': 'a04eafb348c26b15a8c1aa87a333caa3cdeec9c9',
     'www.paypal.com': 'b9c971668c4e377b82bdee9b07f9c191b6ee59de',
-    'www.wikipedia.org': '87f5babbd897c579b66af52fd8638b99bd1ce826',
+    'www.wikipedia.org': '586684ef773ea0b85f233873cb4610e8d0e08cb3',
     'twitter.com': '235a79b3270d790505e0bea2cf5c149f9038821b',
     'www.blogger.com': '5b832c3137358a8a28de1be56ec04b8f9e42ac2c',
-    'www.linkedin.com': '90326f123ccfc26cc827853e3cb678f4eda307f0',
+    'www.linkedin.com': 'a33bb54cbc57513f94a3c288a64a02c5f68d4057',
     'www.yahoo.com': '413072f803ce961210e9a45d10da14b0d2d48532',
     'wordpress.com': '1fe2d64111fca8d71b234ffceca86d80de17d94a',
     'www.wordpress.com': '54e089df28538300105dd43764fde7d0f5ed5bc0'}
@@ -57,9 +57,13 @@ for website, ver_fprint in ver_fing_sorted.items():
 
 if wrong_fingerprint > 0:
     print()
-    print('There might be an HTTPS proxy intercepting your ssl connections.'
-          ' Check that your verified fingerprints are accurate and up to date'
-          ' then try again.')
+    print(
+        'There might be an HTTPS proxy intercepting your secured connections.')
+    print(
+        'Certificates might differ depending of where you are geographically.')
+    print(
+        'Check that your verified fingerprints are accurate and up to date then try again.')
+    print('For more info: https://www.grc.com/fingerprints.htm')
 else:
     print()
     print('No HTTPS proxy detected.')
