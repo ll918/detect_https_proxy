@@ -16,7 +16,7 @@ verified_fingerprint = {
     'www.paypal.com': 'b9c971668c4e377b82bdee9b07f9c191b6ee59de',
     'www.wikipedia.org': '586684ef773ea0b85f233873cb4610e8d0e08cb3',
     'twitter.com': '235a79b3270d790505e0bea2cf5c149f9038821b',
-    'www.blogger.com': '5b832c3137358a8a28de1be56ec04b8f9e42ac2c',
+    'www.blogger.com': '7a5b1a6240b17d0b09398652f7f97e0255878ef3',
     'www.linkedin.com': 'a33bb54cbc57513f94a3c288a64a02c5f68d4057',
     'www.yahoo.com': '413072f803ce961210e9a45d10da14b0d2d48532',
     'wordpress.com': '1fe2d64111fca8d71b234ffceca86d80de17d94a',
