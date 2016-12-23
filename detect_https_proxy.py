@@ -45,7 +45,6 @@ def get_certificate(site):
     except:
         print("Unexpected error:", sys.exc_info()[0],
               'retrieving certificate from', site)
-
     return der_cert
 
 
