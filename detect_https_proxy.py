@@ -18,7 +18,7 @@ verified_fingerprint = {
     'www.wikipedia.org': '586684ef773ea0b85f233873cb4610e8d0e08cb3',
     'twitter.com': '235a79b3270d790505e0bea2cf5c149f9038821b',
     'www.linkedin.com': '3a6039e8cee4fb5887b85397898f049820bfe391',
-    'www.yahoo.com': '413072f803ce961210e9a45d10da14b0d2d48532',
+    'www.yahoo.com': 'ec9cc6bcfe15035b362477f11ce62cae8257224c',
     'wordpress.com': '1fe2d64111fca8d71b234ffceca86d80de17d94a',
     'www.wordpress.com': '54e089df28538300105dd43764fde7d0f5ed5bc0'}
 
