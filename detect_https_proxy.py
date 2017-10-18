@@ -14,11 +14,11 @@ https_port = 443
 verified_fingerprint = {
     'www.grc.com': '3fc3245c36b389b175ca20c01fc0f1494b7473e6',
     'www.facebook.com': '936f912bafad216fa515256e572cdc35a1451aa5',
-    'www.paypal.com': 'b9c971668c4e377b82bdee9b07f9c191b6ee59de',
+    'www.paypal.com': 'bb20b03ffb93e177ff23a7438949601a41aec61c',
     'www.wikipedia.org': '586684ef773ea0b85f233873cb4610e8d0e08cb3',
     'twitter.com': '235a79b3270d790505e0bea2cf5c149f9038821b',
     'www.linkedin.com': '3a6039e8cee4fb5887b85397898f049820bfe391',
-    'www.yahoo.com': 'ec9cc6bcfe15035b362477f11ce62cae8257224c',
+    'www.yahoo.com': 'dc0866cdf51594fd85ccf249d507164552828ad2',
     'wordpress.com': '791a83832120f66d9d1e775fed8916fc8ea0e0c3',
     'www.wordpress.com': '54e089df28538300105dd43764fde7d0f5ed5bc0'}
 
